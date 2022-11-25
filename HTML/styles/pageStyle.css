@@ -1,0 +1,99 @@
+ 
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            background-color: #000000;
+            color: rgb(255, 255, 255);
+        }
+
+        article{
+            align-self: center;
+            width: 75%;
+            margin: auto;
+            padding: 100px;
+        }
+
+        footer{
+        background-color: rgb(53, 51, 51);
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        font-size: 12pt;
+        font-weight: lighter;
+        font-family: 'Times New Roman', Times, serif;
+        padding: 8px;
+        color: white;
+        display: flex; 
+        justify-content: space-around
+        }
+
+        header{
+            background-color: rgb(36, 36, 36);
+            margin: 0px;
+            padding: 20px;
+            width: 100%;
+            margin: 0px;
+            display: flex; 
+            position: fixed; 
+            z-index: 999; 
+        } 
+        .searchText{
+           
+            min-width: 200px;  
+            border-color: transparent;
+           border-bottom-left-radius: 20px;
+           border-top-left-radius: 20px;
+            padding: 8px;
+            background-color: white;
+            margin-left: auto;
+
+            
+        }
+
+        .searchText::-webkit-input-placeholder{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: darkred;
+            font-weight: 100;
+            
+        } 
+
+        .searchButton{ 
+            height: auto; 
+            color: white;
+            margin: 0px -5px;
+            padding: 8.5px 55px 10px 55px;
+            background-color: rgb(21, 11, 104);
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .searchButton:hover{
+            background-color: rgb(12, 10, 128);
+            color: rgb(255, 255, 255);
+        }
+
+        .searchButton:active{
+            background-color: rgb(21, 2, 65);
+            color: rgb(255, 255, 255);
+        }
+
+        input:focus{
+            outline: none;
+        }
+    
+        .prevent-select {
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+        }
+      
+        .logo{
+            color: rgb(218, 218, 218);
+            background-color: transparent;
+            font-size: 30px;
+            padding: 0px;
+            padding-left: 30px;
+            margin: 0px;
+        }
+ 
