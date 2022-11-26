@@ -14,6 +14,14 @@
             padding: 100px;
         }
 
+        .center{
+            align-self: center; 
+            margin: auto;
+            padding: 20px;
+            display: block;
+        }
+
+
         footer{
         background-color: rgb(53, 51, 51);
         position: fixed;
@@ -39,14 +47,13 @@
             z-index: 999; 
         } 
         .searchText{
-           
-            min-width: 200px;  
+            
             border-color: transparent;
            border-bottom-left-radius: 20px;
            border-top-left-radius: 20px;
             padding: 8px;
             background-color: white;
-            margin-left: auto;
+            margin-left: 0px;
 
             
         }
@@ -97,3 +104,40 @@
             margin: 0px;
         }
  
+        .firstCap::first-letter {
+            color: red;
+            font-size: 150%;
+          }
+
+          nav{ 
+            background-color: inherit;
+            margin-left: auto;
+          }
+
+          nav>ul{ 
+            padding: 0px 16px;
+            display: flex;
+          margin-left: 100px;
+            list-style: none;
+            background-color: transparent;
+          }
+
+          nav>ul>li{ 
+           padding: 8px 16px;
+           background-color: transparent;
+          }
+
+          nav>ul>li>a{ 
+            padding: 20px;
+            background-color: transparent;
+            text-decoration: none;
+           font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+           }
+
+           nav>ul>li>a:hover{ 
+           color: rgb(175, 236, 33);
+           font-weight: bold;
+           transition: all 0.2s ease;
+       
+           position: static;
+           }
