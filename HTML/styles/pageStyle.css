@@ -5,6 +5,7 @@
             padding: 0px;
             background-color: #000000;
             color: rgb(255, 255, 255);
+            z-index: 1; 
         }
 
         article{
@@ -82,11 +83,12 @@
 
         .searchButton:active{
             background-color: rgb(21, 2, 65);
-            color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
         }
 
         input:focus{
             outline: none;
+            color: #000000;
         }
     
         .prevent-select {
@@ -115,15 +117,16 @@
           }
 
           nav>ul{ 
-            padding: 0px 16px;
-            display: flex;
-          margin-left: 100px;
+            padding-top:  10px;
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr);   
+            margin-left: 100px;
             list-style: none;
             background-color: transparent;
           }
-
-          nav>ul>li{ 
-           padding: 8px 16px;
+         
+          nav>ul>li{  
+            text-align: center; 
            background-color: transparent;
           }
 
@@ -133,11 +136,13 @@
             text-decoration: none;
            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
            }
-
            nav>ul>li>a:hover{ 
-           color: rgb(175, 236, 33);
-           font-weight: bold;
-           transition: all 0.2s ease;
-       
-           position: static;
+        color: greenyellow;
            }
+     
+     .waterMarkImage{
+        position: fixed;
+        top: 30%;
+        left: 35%;
+        opacity: 0.5;
+        }
