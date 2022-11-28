@@ -6,22 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyPage</title> 
     <link rel="stylesheet" href="styles/pageStyle.css">
+    <script src="javascripts/jScrip.js"></script>
 </head>
 <body>
   <header> 
      <div class="logo">
         &#9742;
      </div>
-     <nav>
+    <div class="hamburger" onmouseenter="toggleNavMenu()">
+      <div class="hamLine"></div>
+      <div class="hamLine"></div>
+      <div class="hamLine"></div>
+    </div>
+   
+     <nav onmouseleave="toggleNavMenu()">
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Portfolio</a></li>
         <li><a href="#">Service</a></li>
+        <li onclick="SetTheme()">&#9775;</li>
       </ul>
      </nav>
-    <input class="searchText" type="text" placeholder="Search for our tutorials">
-    <span class="searchButton prevent-select">&#x1F50E;&#xFE0E;</span>
+   
   </header> 
 <article>
  <p class="firstCap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima quia cumque quas consequuntur minus adipisci omnis! Maxime deserunt incidunt iure eum optio, qui quis magni, ad, sit laudantium repellat inventore.</p>
@@ -75,7 +82,6 @@
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni rerum facere laudantium architecto distinctio fugit velit commodi cum repellat, qui alias impedit perferendis quam molestias ex aliquid laboriosam voluptatum corrupti!
    
   
-      <img   src="images/pexels-photo-4029925.webp" height="500px" alt="" class="center waterMarkImage">  
      <p> 
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ab eum aspernatur, ad animi ea vero aut? Perspiciatis expedita molestiae provident dolorum debitis, fugiat at eveniet veniam exercitationem sed repellat?
             <em>this is something cool</em>

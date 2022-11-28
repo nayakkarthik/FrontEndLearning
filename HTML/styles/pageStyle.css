@@ -3,16 +3,30 @@
             box-sizing: border-box;
             margin: 0px;
             padding: 0px;
-            background-color: #000000;
-            color: rgb(255, 255, 255);
+            background-color: var(--bg-color);
+            color: var( --text-color);; 
             z-index: 1; 
         }
+ 
+         
+          :root.light {
+            --bg-color: white;
+            --text-color: black;
+            --stripe-color: rgb(233, 204, 204);
+
+            }
+        
+            :root, :root.dark {
+            --bg-color: black;
+            --text-color: white;
+            --stripe-color: rgb(36, 36, 36);
+
+    }
 
         article{
             align-self: center;
-            width: 75%;
-            margin: auto;
-            padding: 100px;
+            margin:0px 16px;
+            padding-top: 100px;
         }
 
         .center{
@@ -24,21 +38,21 @@
 
 
         footer{
-        background-color: rgb(53, 51, 51);
+        background-color: var(--stripe-color);
         position: fixed;
         bottom: 0px;
         width: 100%;
-        font-size: 12pt;
+        font-size: px;
         font-weight: lighter;
         font-family: 'Times New Roman', Times, serif;
         padding: 8px;
-        color: white;
+        color: var( --text-color);
         display: flex; 
         justify-content: space-around
         }
 
         header{
-            background-color: rgb(36, 36, 36);
+            background-color:var(--stripe-color);
             margin: 0px;
             padding: 20px;
             width: 100%;
@@ -46,59 +60,12 @@
             display: flex; 
             position: fixed; 
             z-index: 999; 
-        } 
-        .searchText{
-            
-            border-color: transparent;
-           border-bottom-left-radius: 20px;
-           border-top-left-radius: 20px;
-            padding: 8px;
-            background-color: white;
-            margin-left: 0px;
-
-            
         }
 
-        .searchText::-webkit-input-placeholder{
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            color: darkred;
-            font-weight: 100;
-            
-        } 
-
-        .searchButton{ 
-            height: auto; 
-            color: white;
-            margin: 0px -5px;
-            padding: 8.5px 55px 10px 55px;
-            background-color: rgb(21, 11, 104);
-            border-top-right-radius: 20px;
-            border-bottom-right-radius: 20px;
-        }
-
-        .searchButton:hover{
-            background-color: rgb(12, 10, 128);
-            color: rgb(255, 255, 255);
-        }
-
-        .searchButton:active{
-            background-color: rgb(21, 2, 65);
-            color: rgb(0, 0, 0);
-        }
-
-        input:focus{
-            outline: none;
-            color: #000000;
-        }
-    
-        .prevent-select {
-        -webkit-user-select: none; /* Safari */
-        -ms-user-select: none; /* IE 10 and IE 11 */
-        user-select: none; /* Standard syntax */
-        }
+      
       
         .logo{
-            color: rgb(218, 218, 218);
+            color: var(--text-color);
             background-color: transparent;
             font-size: 30px;
             padding: 0px;
@@ -119,7 +86,7 @@
           nav>ul{ 
             padding-top:  10px;
             display: grid; 
-            grid-template-columns: repeat(4, 1fr);   
+            grid-template-columns: repeat(5, 1fr);   
             margin-left: 100px;
             list-style: none;
             background-color: transparent;
@@ -131,18 +98,62 @@
           }
 
           nav>ul>li>a{ 
+            color: inherit;
             padding: 20px;
             background-color: transparent;
             text-decoration: none;
            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
            }
-           nav>ul>li>a:hover{ 
-        color: greenyellow;
+           nav>ul>li:hover{ 
+             color: greenyellow;
+             cursor: pointer;
            }
+
      
      .waterMarkImage{
-        position: fixed;
+        position: fixed; 
         top: 30%;
         left: 35%;
         opacity: 0.5;
+        }
+
+        .hamburger{
+            background: transparent;
+            z-index: 10; 
+            margin-left: auto; 
+            margin-top: auto;
+            margin-bottom: auto;
+            display: none;
+        }
+
+    .hamLine{ 
+        width: 20px;
+        height: 1px;
+        margin: 3px 0px;
+        background-color:var( --text-color);; 
+        z-index: 00;
+          } 
+
+        @media screen and (max-width : 768px) {
+            nav{  
+              display: none;
+                position: fixed;
+                right: 0; 
+                height: 0;
+                width: 100%;
+               
+            }
+            .navHide{
+                display: block;
+                height: 30vh; 
+            }
+            nav>ul{
+                display: flexbox; 
+                margin: auto;
+                grid-template-columns: auto;
+                row-gap: 2em;
+            } 
+            .hamburger{
+                display: block;
+            }
         }
