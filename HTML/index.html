@@ -5,8 +5,36 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    nav {
+  display: grid;  
+  margin: auto;
+  grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+  /* 
+  if we did this instead of the template it would be a problem:
+  grid-auto-flow: column;
+  */
+  font: 120% system-ui;
+  text-align: right;
+  padding: 2rem 1rem;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  font-weight: bold;
+}
+  </style>
 </head>
-<body>
+<body> 
+  <nav> 
+    <div>this is something big</div>
+    <a href="">One</a>
+    <a href="">Two</a>
+    <a href="">Three</a>
+    <a href="">Four</a>
   
+  </nav>
 </body>
 </html>
