@@ -1,3 +1,4 @@
+alert('hellow');
 function toggleNavMenu()
 {
     var menu = document.querySelector("nav");
